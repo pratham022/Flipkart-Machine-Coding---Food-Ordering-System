@@ -25,8 +25,8 @@ public class OrderService {
         for (OrderItem item : orderRequest.getItems()) {
             List<MenuItem> restMenuItems = restaurant.getMenu().getItems();
             for (MenuItem menuItem : restMenuItems) {
-                if (menuItem.getName().equals(menuItem.getName())) {
-                    totalCost += menuItem.getPrice() + item.getQuantity();
+                if (menuItem.getName().equals(item.getItem().getName())) {
+                    totalCost += menuItem.getPrice() * item.getQuantity();
                 }
             }
 
